@@ -1,7 +1,15 @@
 'use strict';
 
 //Complete this algo
-const isLoop = (linkedlist) => {
+const isLoop = (linkedList) => {
+
+  let node = linkedList.head
+  while(linkedList.tail !== node){
+    if (node.next.previous!== node) return true;
+    node = node.next
+  }
+
+  return false;
 
 };
 
